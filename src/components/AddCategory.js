@@ -21,22 +21,39 @@ export const AddCategory = ({ setCategories, setQuantity }) => {
     setQuantity(event.target.value);
   };
 
+  const clearAll = () => {
+    setCategories([]);
+    console.log('Se disparooo');
+  };
+
   return (
-    <form onSubmit={handleSubmit}>
-      <p>{inputValue}</p>
-      <input type="text" value={inputValue} onChange={handleInputChange} />
-      <br />
-      <br />
-      <label htmlFor="quantity">
-        Selecciona la cantidad de imagenes que quieres traer {'\n \n'}
-      </label>
-      <select name="selector" id="quantity" onChange={handleQuantity}>
-        <option value={1}>1</option>
-        <option value={3}>3</option>
-        <option value={5}>5</option>
-        <option value={10}>10</option>
-      </select>
-    </form>
+    <div
+      style={{
+        // display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+      }}
+    >
+      <form onSubmit={handleSubmit}>
+        <p>{inputValue}</p>
+        <input type="text" value={inputValue} onChange={handleInputChange} />
+        <br />
+        <br />
+        <label htmlFor="quantity">
+          Selecciona la cantidad de imagenes que quieres traer {'\n \n'}
+        </label>
+        <select name="selector" id="quantity" onChange={handleQuantity}>
+          <option value={1}>1</option>
+          <option value={3}>3</option>
+          <option value={5}>5</option>
+          <option value={10}>10</option>
+        </select>
+      </form>
+      <button style={{ marginTop: 'auto' }} onClick={clearAll}>
+        Clear all
+      </button>
+    </div>
   );
 };
 

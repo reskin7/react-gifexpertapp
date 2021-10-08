@@ -18,9 +18,9 @@ export const GifGrid = ({ category, quantity }) => {
 
       {loading && <p className="animate__animated animate__flash">Loading</p>}
       <div className="card-grid">
-        {images.map((img) => {
-          return <GifGridItem key={img.id} {...img} />;
-        })}
+        {images.map((img) => (
+          <GifGridItem key={img.id} {...img} />
+        ))}
       </div>
     </>
   );

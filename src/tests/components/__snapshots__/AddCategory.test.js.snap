@@ -1,50 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[` should show correctly  1`] = `
-<form
-  onSubmit={[Function]}
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+    }
+  }
 >
-  <p />
-  <input
-    onChange={[Function]}
-    type="text"
-    value=""
-  />
-  <br />
-  <br />
-  <label
-    htmlFor="quantity"
+  <form
+    onSubmit={[Function]}
   >
-    Selecciona la cantidad de imagenes que quieres traer 
-    
+    <p />
+    <input
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <br />
+    <br />
+    <label
+      htmlFor="quantity"
+    >
+      Selecciona la cantidad de imagenes que quieres traer 
+      
  
 
-  </label>
-  <select
-    id="quantity"
-    name="selector"
-    onChange={[Function]}
+    </label>
+    <select
+      id="quantity"
+      name="selector"
+      onChange={[Function]}
+    >
+      <option
+        value={1}
+      >
+        1
+      </option>
+      <option
+        value={3}
+      >
+        3
+      </option>
+      <option
+        value={5}
+      >
+        5
+      </option>
+      <option
+        value={10}
+      >
+        10
+      </option>
+    </select>
+  </form>
+  <button
+    onClick={[Function]}
+    style={
+      Object {
+        "marginTop": "auto",
+      }
+    }
   >
-    <option
-      value={1}
-    >
-      1
-    </option>
-    <option
-      value={3}
-    >
-      3
-    </option>
-    <option
-      value={5}
-    >
-      5
-    </option>
-    <option
-      value={10}
-    >
-      10
-    </option>
-  </select>
-</form>
+    Clear all
+  </button>
+</div>
 `;
